@@ -5,7 +5,7 @@ import streamlit as st
 # -----------------
 # Load / prepare data
 # -----------------
-df = pd.read_csv("wk3/pageviews_year_percapita_continent.csv")
+df = pd.read_csv("data/pageviews_year_percapita_continent.csv")
 
 # Split country and year
 df[['country', 'year']] = df['country_year'].str.rsplit(' ', n=1, expand=True)
