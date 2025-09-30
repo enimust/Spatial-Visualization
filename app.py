@@ -54,11 +54,18 @@ filtered_df = df[df["region"].isin(regions)]
 # -----------------
 # Plotly choropleth
 # -----------------
+
+# --- NEW CODE START ---
+global_max = (int(global_max / 100) + 1) * 100
+# --- NEW CODE END ---
+
+
 fig = px.choropleth(
     filtered_df,
     locations="country",
     locationmode="country names",
     color=metric,
+    range_color=[0, global_max],
     animation_frame="year",
     hover_name="country",
     color_continuous_scale="Viridis",
