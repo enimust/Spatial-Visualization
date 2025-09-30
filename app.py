@@ -56,6 +56,7 @@ filtered_df = df[df["region"].isin(regions)]
 # -----------------
 
 # --- NEW CODE START ---
+global_max = filtered_df[metric].max()
 global_max = (int(global_max / 100) + 1) * 100
 # --- NEW CODE END ---
 
